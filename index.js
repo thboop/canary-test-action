@@ -5,7 +5,7 @@ const wait = require('./wait');
 // most @actions toolkit packages have async methods
 async function run() {
   try { 
-    core.log("::save-state name=test::TestValue")
+    core.info("::save-state name=test::TestValue")
   } 
   catch (error) {
     core.setFailed(error.message);
