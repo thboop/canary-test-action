@@ -60,14 +60,7 @@ const wait = __webpack_require__(949);
 // most @actions toolkit packages have async methods
 async function run() {
   try { 
-    const ms = core.getInput('milliseconds');
-    console.log(`Waiting ${ms} milliseconds ...`)
-
-    core.debug((new Date()).toTimeString())
-    wait(parseInt(ms));
-    core.debug((new Date()).toTimeString())
-
-    core.setOutput('time', new Date().toTimeString());
+    core.log("::save-state name=test::TestValue")
   } 
   catch (error) {
     core.setFailed(error.message);
