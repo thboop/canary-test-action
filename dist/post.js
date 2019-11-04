@@ -53,11 +53,11 @@ const wait = __webpack_require__(949);
 // most @actions toolkit packages have async methods
 async function run() {
   try {
-    if (process.env.$STATE_name != 'TestValue') {
+    if (process.env.STATE_name != 'TestValue') {
       core.setFailed(error.message);
     }
     else {
-      console.log('The Saved State value is:', process.env.$STATE_name);
+        core.Error('The Saved State value is:', process.env.STATE_name);
     }
   } 
   catch (error) {
