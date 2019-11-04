@@ -57,7 +57,7 @@ async function run() {
       core.setFailed("Expected State_test to be set");
     }
     else {
-        core.Error('The Saved State value is:', process.env.STATE_test);
+        console.log('The Saved State value is:', process.env.STATE_test);
     }
   } 
   catch (error) {
