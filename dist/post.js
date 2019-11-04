@@ -52,6 +52,7 @@ const wait = __webpack_require__(949);
 
 // most @actions toolkit packages have async methods
 async function run() {
+  console.log(process.env);
   try {
     if (process.env.STATE_name != 'TestValue') {
       core.setFailed("Expected State_name to be set");
