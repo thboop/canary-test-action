@@ -54,7 +54,7 @@ const wait = __webpack_require__(949);
 async function run() {
   try {
     if (process.env.STATE_name != 'TestValue') {
-      core.setFailed(error.message);
+      core.setFailed("Expected State_name to be set");
     }
     else {
         core.Error('The Saved State value is:', process.env.STATE_name);
