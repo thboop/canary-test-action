@@ -60,7 +60,7 @@ const wait = __webpack_require__(949);
 // most @actions toolkit packages have async methods
 async function run() {
   try { 
-    core.info("::save-state name=test::TestValue")
+    console.log("::save-state name=test::TestValue");
   } 
   catch (error) {
     core.setFailed(error.message);

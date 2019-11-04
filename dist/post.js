@@ -57,7 +57,7 @@ async function run() {
       core.setFailed(error.message);
     }
     else {
-      core.log('The Saved State value is:', process.env.$STATE_name);
+      console.log('The Saved State value is:', process.env.$STATE_name);
     }
   } 
   catch (error) {
