@@ -10,7 +10,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - id: test
+      run: ::set-output name=foo::bar
     - name: Dump steps context
       env:
         STEPS_CONTEXT: ${{ toJson(steps) }}
