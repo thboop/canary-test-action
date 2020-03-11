@@ -10,6 +10,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+    - name: Dump steps context
+      env:
+        STEPS_CONTEXT: ${{ toJson(steps) }}
+      run: echo "$STEPS_CONTEXT"
     - id: test
       run: echo "::set-output name=foo::bar"
     - name: Dump steps context
